@@ -1,13 +1,13 @@
-import React, { Component } from 'react';
+import React from 'react';
+import createReactClass from 'create-react-class';
 
-class TodoItem extends Component {
-    done() {
-        debugger
+const TodoItem = createReactClass({
+	done() {
         this.props.done(this.props.todo);
-    }
+    },
     render() {
         return <li onClick={this.done}>{this.props.todo}</li>
     }
-}
+});
 
 export default TodoItem;

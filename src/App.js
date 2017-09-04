@@ -1,20 +1,8 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import logo from './logo.svg';
-//import TodoItem from './TodoItem';
+import TodoItem from './TodoItem';
 import './App.css';
-
-var self = this;
-
-class TodoItem extends Component {
-    done() {
-        debugger
-        self.props.done(this.props.todo);
-    }
-    render() {
-        return <li onClick={this.done}>{this.props.todo}</li>
-    }
-}
 
 class App extends Component {
     constructor() {
@@ -70,7 +58,6 @@ class App extends Component {
                 <ul>
                     {
                         this.state.todos.map(function(todo) {
-                            debugger;
                             return <TodoItem todo={todo} done={this.done} />
                         }.bind(this))
                     }
